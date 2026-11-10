@@ -284,4 +284,6 @@ async def show_list(event, service, product, sort_type, page):
     if nav_buttons:
         buttons.append(nav_buttons)
     buttons.append([Button.inline("القائمة الرئيسية", b"back_to_start")])
-    await event.edit(f"{titles.get(sort_type")])
+    await event.edit(titles.get(sort_type, "قائمة الدول"), buttons=buttons)
+
+bot.run_until_disconnected()
